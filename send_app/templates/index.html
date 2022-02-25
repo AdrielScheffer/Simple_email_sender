@@ -1,32 +1,45 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>send email</title>
 </head>
 <body>
-    <form action = "" method="POST", class="contact-form">
-        {% csrf_token %}
-        <div class="form-control">
-            <div class="tag">full name</div>
-            <input type="text" name = "full-name">
-        </div>
-        <div class="form-control">
-            <div class="tag">email</div>
-            <input type="text" name = "email">
-        </div>
-        <div class="form-control">
-            <div class="tag">subject</div>
-            <input type="text" name = "subject">
-        </div>
-        <div class="form-control">
-            <div class="tag">message</div>
-            <textarea name="message" cols="30" rows="10"></textarea>
-        </div>
-        <div class="form-control">
-            <input type="submit", class = "btn submit-btn" value = "send message">
-        </div>
+    
+    <div class="container">
+        <form action = "" method="POST", class="contact-form">
+            {% csrf_token %}
+            <div class="form-control">
+                <div class="tag">full name</div>
+                <input type="text" name = "full-name">
+            </div>
+            <div class="form-control">
+                <div class="tag">email</div>
+                <input type="text" name = "email">
+            </div>
+            <div class="form-control">
+                <div class="tag">subject</div>
+                <input type="text" name = "subject">
+            </div>
+            <div class="form-control">
+                <div class="tag">message</div>
+                <textarea name="message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-control">
+                <input type="submit", class = "btn submit-btn" value = "send message">
+            </div>
+        </form>
+    </div>
+    
 </body>
+
+<footer>
+
+
+
+</footer>
 </html>
