@@ -125,3 +125,11 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = ''  #here you have to put the email from you want to send the email
+EMAIL_HOST_PASSWORD = '' # here you put the email password
+DEFAULT_FROM_EMAIL='' # here again the email from you want to send the email
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMARIL_USE_SSL = False
